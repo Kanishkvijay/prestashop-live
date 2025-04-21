@@ -1,0 +1,10 @@
+FROM prestashop/prestashop:8.2
+
+# Set necessary environment variables
+ENV PS_DEV_MODE=1
+
+# Expose the port that PrestaShop will run on
+EXPOSE 80
+
+# Set the default command to start PrestaShop
+CMD ["docker-php-entrypoint", "apache2-foreground"]
